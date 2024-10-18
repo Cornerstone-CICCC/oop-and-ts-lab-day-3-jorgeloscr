@@ -15,4 +15,4 @@ fruits.push("Date");
 fruits.push("Elderberry");
 
 removeBetween("Banana", "Elderberry");
-fruits.printStack(); // Apple Banana Elderberry
+console.log(fruits.printStack()); // Apple Banana Elderberry
