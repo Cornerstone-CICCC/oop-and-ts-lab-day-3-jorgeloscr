@@ -5,6 +5,25 @@ const Stack = require('../lib/Stack')
 
 function calcDistance(a, b) {
   // your code here
+
+  const stack = new Stack();
+  const indexMap = new Map();
+
+  stack.push(a);
+  stack.push(b);
+
+  const items = stack.items.slice(); 
+  items.forEach((item, index) => {
+    indexMap.set(item, index);
+  });
+
+  const indexA = indexMap.get(a);
+  const indexB = indexMap.get(b);
+
+  if (indexA !== undefined && indexB !== undefined) {
+    return Math.abs(indexA - indexB);
+  }
+  return "One or both elements not found";
 }
 
 const students = new Stack()
